@@ -1,0 +1,200 @@
+[8] Log opened at 2020-07-23 04:48:36
+[8] I: Checking remote connect back address.
+[8] I: Checking header 'HTTP_X_FORWARDED_FOR'.
+[8] I: Checking header 'REMOTE_ADDR'.
+[8] I: Remote address found, connecting to 172.21.0.1:9001.
+[8] W: Creating socket for '172.21.0.1:9001', poll success, but error: Operation now in progress (29).
+[8] E: Could not connect to client. :-(
+[8] Log closed at 2020-07-23 04:48:36
+[8]
+[9] Log opened at 2020-07-23 04:48:47
+[9] I: Checking remote connect back address.
+[9] I: Checking header 'HTTP_X_FORWARDED_FOR'.
+[9] I: Checking header 'REMOTE_ADDR'.
+[9] I: Remote address found, connecting to 172.21.0.1:9001.
+[9] W: Creating socket for '172.21.0.1:9001', poll success, but error: Operation now in progress (29).
+[9] E: Could not connect to client. :-(
+[9] Log closed at 2020-07-23 04:48:47
+[9]
+[9] Log opened at 2020-07-23 04:52:09
+[9] I: Connecting to configured address/port: host.docker.internal:9001.
+[9] I: Connected to client. :-)
+[9] -> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" fileuri="file:///var/www/html/xdebug/demo.php" language="PHP" xdebug:language_version="7.3.8" protocol_version="1.0" appid="9" idekey="PHPSTORM"><engine version="2.7.2"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[https://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2019 by Derick Rethans]]></copyright></init>
+[9]
+[9] <- breakpoint_list -i 1
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="1"></response>
+[9]
+[9] <- breakpoint_set -i 2 -t line -f file:///var/www/html/xdebug/demo.php -n 3
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="2" id="90001"></response>
+[9]
+[9] <- breakpoint_set -i 3 -t line -f file:///var/www/html/xdebug/demo.php -n 6
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="3" id="90002"></response>
+[9]
+[9] <- breakpoint_set -i 4 -t line -f file:///var/www/html/xdebug/demo.php -n 7
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="4" id="90003"></response>
+[9]
+[9] <- breakpoint_list -i 5
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="5"><breakpoint type="line" filename="file:///var/www/html/xdebug/demo.php" lineno="3" state="enabled" hit_count="0" hit_value="0" id="90001"></breakpoint><breakpoint type="line" filename="file:///var/www/html/xdebug/demo.php" lineno="6" state="enabled" hit_count="0" hit_value="0" id="90002"></breakpoint><breakpoint type="line" filename="file:///var/www/html/xdebug/demo.php" lineno="7" state="enabled" hit_count="0" hit_value="0" id="90003"></breakpoint></response>
+[9]
+[9] <- breakpoint_list -i 6
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="6"><breakpoint type="line" filename="file:///var/www/html/xdebug/demo.php" lineno="3" state="enabled" hit_count="0" hit_value="0" id="90001"></breakpoint><breakpoint type="line" filename="file:///var/www/html/xdebug/demo.php" lineno="6" state="enabled" hit_count="0" hit_value="0" id="90002"></breakpoint><breakpoint type="line" filename="file:///var/www/html/xdebug/demo.php" lineno="7" state="enabled" hit_count="0" hit_value="0" id="90003"></breakpoint></response>
+[9]
+[9] <- breakpoint_set -i 7 -t exception -x *
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="7" id="90004"></response>
+[9]
+[9] <- run -i 8
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="run" transaction_id="8" status="break" reason="ok"><xdebug:message filename="file:///var/www/html/xdebug/demo.php" lineno="3"></xdebug:message></response>
+[9]
+[9] <- stack_get -i 9
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="9"><stack where="{main}" level="0" type="file" filename="file:///var/www/html/xdebug/demo.php" lineno="3"></stack></response>
+[9]
+[9] <- context_names -i 10 -d 0
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_names" transaction_id="10"><context name="Locals" id="0"></context><context name="Superglobals" id="1"></context><context name="User defined constants" id="2"></context></response>
+[9]
+[9] <- context_get -i 11 -d 0 -c 0
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_get" transaction_id="11" context="0"><property name="$a" fullname="$a" type="uninitialized"></property><property name="$b" fullname="$b" type="uninitialized"></property><property name="$c" fullname="$c" type="uninitialized"></property><property name="$d" fullname="$d" type="uninitialized"></property><property name="$e" fullname="$e" type="uninitialized"></property></response>
+[9]
+[9] <- step_into -i 12
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="step_into" transaction_id="12" status="break" reason="ok"><xdebug:message filename="file:///var/www/html/xdebug/demo.php" lineno="4"></xdebug:message></response>
+[9]
+[9] <- stack_get -i 13
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="13"><stack where="{main}" level="0" type="file" filename="file:///var/www/html/xdebug/demo.php" lineno="4"></stack></response>
+[9]
+[9] <- context_names -i 14 -d 0
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_names" transaction_id="14"><context name="Locals" id="0"></context><context name="Superglobals" id="1"></context><context name="User defined constants" id="2"></context></response>
+[9]
+[9] <- context_get -i 15 -d 0 -c 0
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_get" transaction_id="15" context="0"><property name="$a" fullname="$a" type="uninitialized"></property><property name="$b" fullname="$b" type="uninitialized"></property><property name="$c" fullname="$c" type="uninitialized"></property><property name="$d" fullname="$d" type="uninitialized"></property><property name="$e" fullname="$e" type="uninitialized"></property></response>
+[9]
+[9] <- step_into -i 16
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="step_into" transaction_id="16" status="break" reason="ok"><xdebug:message filename="file:///var/www/html/xdebug/demo.php" lineno="5"></xdebug:message></response>
+[9]
+[9] <- stack_get -i 17
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="17"><stack where="{main}" level="0" type="file" filename="file:///var/www/html/xdebug/demo.php" lineno="5"></stack></response>
+[9]
+[9] <- step_into -i 18
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="step_into" transaction_id="18" status="break" reason="ok"><xdebug:message filename="file:///var/www/html/xdebug/demo.php" lineno="6"></xdebug:message></response>
+[9]
+[9] <- stack_get -i 19
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="19"><stack where="{main}" level="0" type="file" filename="file:///var/www/html/xdebug/demo.php" lineno="6"></stack></response>
+[9]
+[9] <- step_into -i 20
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="step_into" transaction_id="20" status="break" reason="ok"><xdebug:message filename="file:///var/www/html/xdebug/demo.php" lineno="7"></xdebug:message></response>
+[9]
+[9] <- stack_get -i 21
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="21"><stack where="{main}" level="0" type="file" filename="file:///var/www/html/xdebug/demo.php" lineno="7"></stack></response>
+[9]
+[9] <- step_into -i 22
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="step_into" transaction_id="22" status="break" reason="ok"><xdebug:message filename="file:///var/www/html/xdebug/demo.php" lineno="8"></xdebug:message></response>
+[9]
+[9] <- stack_get -i 23
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="23"><stack where="{main}" level="0" type="file" filename="file:///var/www/html/xdebug/demo.php" lineno="8"></stack></response>
+[9]
+[9] <- step_into -i 24
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="step_into" transaction_id="24" status="break" reason="ok"><xdebug:message filename="file:///var/www/html/xdebug/demo.php" lineno="9"></xdebug:message></response>
+[9]
+[9] <- stack_get -i 25
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="25"><stack where="{main}" level="0" type="file" filename="file:///var/www/html/xdebug/demo.php" lineno="9"></stack></response>
+[9]
+[9] <- context_names -i 26 -d 0
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_names" transaction_id="26"><context name="Locals" id="0"></context><context name="Superglobals" id="1"></context><context name="User defined constants" id="2"></context></response>
+[9]
+[9] <- context_get -i 27 -d 0 -c 0
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_get" transaction_id="27" context="0"><property name="$a" fullname="$a" type="int"><![CDATA[1]]></property><property name="$b" fullname="$b" type="int"><![CDATA[2]]></property><property name="$c" fullname="$c" type="int"><![CDATA[3]]></property><property name="$d" fullname="$d" type="int"><![CDATA[3]]></property><property name="$e" fullname="$e" type="int"><![CDATA[5]]></property></response>
+[9]
+[9] <- context_get -i 28 -d 0 -c 1
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_get" transaction_id="28" context="1"><property name="$_COOKIE" fullname="$_COOKIE" type="array" children="1" numchildren="7" page="0" pagesize="32"><property name="wordpress_test_cookie" fullname="$_COOKIE[&quot;wordpress_test_cookie&quot;]" type="string" size="15" encoding="base64"><![CDATA[V1AgQ29va2llIGNoZWNr]]></property><property name="wordpress_logged_in_86a9106ae65537651a8e456835b316ab" fullname="$_COOKIE[&quot;wordpress_logged_in_86a9106ae65537651a8e456835b316ab&quot;]" type="string" size="124" encoding="base64"><![CDATA[cm9vdHwxNTkyNDYxNzQwfHJQQk1GaUxrVGRyUndRYVl5Z25VTWtXRjBYUUZRQmhKUlA1dUJ4cXpIYVp8ODc2YzllYjNlNWZiNTIwYTQ1YjVjNWUwOTUxMWNjYmQ4Y2E4MWRlYjkwNGZhMzg0MmVmN2E2OWQ4YTg2MGJkNw==]]></property><property name="Hm_lvt_49cc02c62fdb09c867c9340508d5af34" fullname="$_COOKIE[&quot;Hm_lvt_49cc02c62fdb09c867c9340508d5af34&quot;]" type="string" size="10" encoding="base64"><![CDATA[MTU5MjI4OTg2NQ==]]></property><property name="Hm_lpvt_49cc02c62fdb09c867c9340508d5af34" fullname="$_COOKIE[&quot;Hm_lpvt_49cc02c62fdb09c867c9340508d5af34&quot;]" type="string" size="10" encoding="base64"><![CDATA[MTU5MjI4OTg2NQ==]]></property><property name="PHPSESSID" fullname="$_COOKIE[&quot;PHPSESSID&quot;]" type="string" size="32" encoding="base64"><![CDATA[ZTFmMzllNDljZjBlMzZkOTBhM2I1NTliMDUzOGM5MzM=]]></property><property name="wp-settings-1" fullname="$_COOKIE[&quot;wp-settings-1&quot;]" type="string" size="36" encoding="base64"><![CDATA[ZWRpdG9yPXRpbnltY2UmbGlicmFyeUNvbnRlbnQ9YnJvd3Nl]]></property><property name="wp-settings-time-1" fullname="$_COOKIE[&quot;wp-settings-time-1&quot;]" type="string" size="10" encoding="base64"><![CDATA[MTU5MjQwNzA2OA==]]></property></property><property name="$_ENV" fullname="$_ENV" type="array" children="0" numchildren="0" page="0" pagesize="32"></property><property name="$_FILES" fullname="$_FILES" type="array" children="0" numchildren="0" page="0" pagesize="32"></property><property name="$_GET" fullname="$_GET" type="array" children="0" numchildren="0" page="0" pagesize="32"></property><property name="$_POST" fullname="$_POST" type="array" children="0" numchildren="0" page="0" pagesize="32"></property><property name="$_REQUEST" fullname="$_REQUEST" type="array" children="0" numchildren="0" page="0" pagesize="32"></property><property name="$_SERVER" fullname="$_SERVER" type="array" children="1" numchildren="53" page="0" pagesize="32"><property name="PHP_EXTRA_CONFIGURE_ARGS" fullname="$_SERVER[&quot;PHP_EXTRA_CONFIGURE_ARGS&quot;]" type="string" size="77" encoding="base64"><![CDATA[LS1lbmFibGUtZnBtIC0td2l0aC1mcG0tdXNlcj13d3ctZGF0YSAtLXdpdGgtZnBtLWdyb3VwPXd3dy1kYXRhIC0tZGlzYWJsZS1jZ2k=]]></property><property name="HOSTNAME" fullname="$_SERVER[&quot;HOSTNAME&quot;]" type="string" size="12" encoding="base64"><![CDATA[NDI1Yzk3NjM0OGY5]]></property><property name="PHP_INI_DIR" fullname="$_SERVER[&quot;PHP_INI_DIR&quot;]" type="string" size="18" encoding="base64"><![CDATA[L3Vzci9sb2NhbC9ldGMvcGhw]]></property><property name="HOME" fullname="$_SERVER[&quot;HOME&quot;]" type="string" size="8" encoding="base64"><![CDATA[L3Zhci93d3c=]]></property><property name="PHP_LDFLAGS" fullname="$_SERVER[&quot;PHP_LDFLAGS&quot;]" type="string" size="34" encoding="base64"><![CDATA[LVdsLC1PMSAtV2wsLS1oYXNoLXN0eWxlPWJvdGggLXBpZQ==]]></property><property name="PHP_CFLAGS" fullname="$_SERVER[&quot;PHP_CFLAGS&quot;]" type="string" size="40" encoding="base64"><![CDATA[LWZzdGFjay1wcm90ZWN0b3Itc3Ryb25nIC1mcGljIC1mcGllIC1PMg==]]></property><property name="PHP_MD5" fullname="$_SERVER[&quot;PHP_MD5&quot;]" type="string" size="0" encoding="base64"><![CDATA[]]></property><property name="PHP_VERSION" fullname="$_SERVER[&quot;PHP_VERSION&quot;]" type="string" size="5" encoding="base64"><![CDATA[Ny4zLjg=]]></property><property name="GPG_KEYS" fullname="$_SERVER[&quot;GPG_KEYS&quot;]" type="string" size="81" encoding="base64"><![CDATA[Q0JBRjY5RjE3M0EwRkVBNEI1MzdGNDcwRDY2Qzk1OTMxMThCQ0NCNiBGMzgyNTI4MjZBQ0Q5NTdFRjM4MEQzOUYyRjc5NTZCQzVEQTA0QjVE]]></property><property name="PHP_CPPFLAGS" fullname="$_SERVER[&quot;PHP_CPPFLAGS&quot;]" type="string" size="40" encoding="base64"><![CDATA[LWZzdGFjay1wcm90ZWN0b3Itc3Ryb25nIC1mcGljIC1mcGllIC1PMg==]]></property><property name="PHP_ASC_URL" fullname="$_SERVER[&quot;PHP_ASC_URL&quot;]" type="string" size="61" encoding="base64"><![CDATA[aHR0cHM6Ly93d3cucGhwLm5ldC9nZXQvcGhwLTcuMy44LnRhci54ei5hc2MvZnJvbS90aGlzL21pcnJvcg==]]></property><property name="PHP_URL" fullname="$_SERVER[&quot;PHP_URL&quot;]" type="string" size="57" encoding="base64"><![CDATA[aHR0cHM6Ly93d3cucGhwLm5ldC9nZXQvcGhwLTcuMy44LnRhci54ei9mcm9tL3RoaXMvbWlycm9y]]></property><property name="PATH" fullname="$_SERVER[&quot;PATH&quot;]" type="string" size="60" encoding="base64"><![CDATA[L3Vzci9sb2NhbC9zYmluOi91c3IvbG9jYWwvYmluOi91c3Ivc2JpbjovdXNyL2Jpbjovc2JpbjovYmlu]]></property><property name="PHPIZE_DEPS" fullname="$_SERVER[&quot;PHPIZE_DEPS&quot;]" type="string" size="76" encoding="base64"><![CDATA[YXV0b2NvbmYgCQlkcGtnLWRldiAJCWZpbGUgCQlnKysgCQlnY2MgCQlsaWJjLWRldiAJCW1ha2UgCQlwa2ctY29uZmlnIAkJcmUyYw==]]></property><property name="PWD" fullname="$_SERVER[&quot;PWD&quot;]" type="string" size="13" encoding="base64"><![CDATA[L3Zhci93d3cvaHRtbA==]]></property><property name="PHP_SHA256" fullname="$_SERVER[&quot;PHP_SHA256&quot;]" type="string" size="64" encoding="base64"><![CDATA[ZjYwNDZiMmFlNjI1ZDhjMDQzMTBiZGEwNzM3YWM2NjBkYzU1NjNhOGUwNGU4YTQ2YzFlZTI0ZWE0MTRhZDVhNQ==]]></property><property name="USER" fullname="$_SERVER[&quot;USER&quot;]" type="string" size="8" encoding="base64"><![CDATA[d3d3LWRhdGE=]]></property><property name="HTTP_COOKIE" fullname="$_SERVER[&quot;HTTP_COOKIE&quot;]" type="string" size="460" encoding="base64"><![CDATA[d29yZHByZXNzX3Rlc3RfY29va2llPVdQK0Nvb2tpZStjaGVjazsgd29yZHByZXNzX2xvZ2dlZF9pbl84NmE5MTA2YWU2NTUzNzY1MWE4ZTQ1NjgzNWIzMTZhYj1yb290JTdDMTU5MjQ2MTc0MCU3Q3JQQk1GaUxrVGRyUndRYVl5Z25VTWtXRjBYUUZRQmhKUlA1dUJ4cXpIYVolN0M4NzZjOWViM2U1ZmI1MjBhNDViNWM1ZTA5NTExY2NiZDhjYTgxZGViOTA0ZmEzODQyZWY3YTY5ZDhhODYwYmQ3OyBIbV9sdnRfNDljYzAyYzYyZmRiMDljODY3YzkzNDA1MDhkNWFmMzQ9MTU5MjI4OTg2NTsgSG1fbHB2dF80OWNjMDJjNjJmZGIwOWM4NjdjOTM0MDUwOGQ1YWYzND0xNTkyMjg5ODY1OyBQSFBTRVNTSUQ9ZTFmMzllNDljZjBlMzZkOTBhM2I1NTliMDUzOGM5MzM7IHdwLXNldHRpbmdzLTE9ZWRpdG9yJTNEdGlueW1jZSUyNmxpYnJhcnlDb250ZW50JTNEYnJvd3NlOyB3cC1zZXR0aW5ncy10aW1lLTE9MTU5MjQwNzA2OA==]]></property><property name="HTTP_ACCEPT_LANGUAGE" fullname="$_SERVER[&quot;HTTP_ACCEPT_LANGUAGE&quot;]" type="string" size="104" encoding="base64"><![CDATA[emgsZW47cT0wLjksemgtQ047cT0wLjgsZW4tVVM7cT0wLjcsZW4tR0I7cT0wLjYsamE7cT0wLjUsZGU7cT0wLjQsemgtVFc7cT0wLjMsZXM7cT0wLjIsbGE7cT0wLjEsZGE7cT0wLjE=]]></property><property name="HTTP_ACCEPT_ENCODING" fullname="$_SERVER[&quot;HTTP_ACCEPT_ENCODING&quot;]" type="string" size="17" encoding="base64"><![CDATA[Z3ppcCwgZGVmbGF0ZSwgYnI=]]></property><property name="HTTP_SEC_FETCH_DEST" fullname="$_SERVER[&quot;HTTP_SEC_FETCH_DEST&quot;]" type="string" size="8" encoding="base64"><![CDATA[ZG9jdW1lbnQ=]]></property><property name="HTTP_SEC_FETCH_USER" fullname="$_SERVER[&quot;HTTP_SEC_FETCH_USER&quot;]" type="string" size="2" encoding="base64"><![CDATA[PzE=]]></property><property name="HTTP_SEC_FETCH_MODE" fullname="$_SERVER[&quot;HTTP_SEC_FETCH_MODE&quot;]" type="string" size="8" encoding="base64"><![CDATA[bmF2aWdhdGU=]]></property><property name="HTTP_SEC_FETCH_SITE" fullname="$_SERVER[&quot;HTTP_SEC_FETCH_SITE&quot;]" type="string" size="4" encoding="base64"><![CDATA[bm9uZQ==]]></property><property name="HTTP_ACCEPT" fullname="$_SERVER[&quot;HTTP_ACCEPT&quot;]" type="string" size="124" encoding="base64"><![CDATA[dGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksaW1hZ2Uvd2VicCxpbWFnZS9hcG5nLCovKjtxPTAuOCxhcHBsaWNhdGlvbi9zaWduZWQtZXhjaGFuZ2U7dj1iMztxPTAuOQ==]]></property><property name="HTTP_USER_AGENT" fullname="$_SERVER[&quot;HTTP_USER_AGENT&quot;]" type="string" size="121" encoding="base64"><![CDATA[TW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTBfMTVfNCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzgzLjAuNDEwMy4xMTYgU2FmYXJpLzUzNy4zNg==]]></property><property name="HTTP_UPGRADE_INSECURE_REQUESTS" fullname="$_SERVER[&quot;HTTP_UPGRADE_INSECURE_REQUESTS&quot;]" type="string" size="1" encoding="base64"><![CDATA[MQ==]]></property><property name="HTTP_CACHE_CONTROL" fullname="$_SERVER[&quot;HTTP_CACHE_CONTROL&quot;]" type="string" size="9" encoding="base64"><![CDATA[bWF4LWFnZT0w]]></property><property name="HTTP_CONNECTION" fullname="$_SERVER[&quot;HTTP_CONNECTION&quot;]" type="string" size="10" encoding="base64"><![CDATA[a2VlcC1hbGl2ZQ==]]></property><property name="HTTP_HOST" fullname="$_SERVER[&quot;HTTP_HOST&quot;]" type="string" size="9" encoding="base64"><![CDATA[bG9jYWxob3N0]]></property><property name="REDIRECT_STATUS" fullname="$_SERVER[&quot;REDIRECT_STATUS&quot;]" type="string" size="3" encoding="base64"><![CDATA[MjAw]]></property><property name="SERVER_NAME" fullname="$_SERVER[&quot;SERVER_NAME&quot;]" type="string" size="9" encoding="base64"><![CDATA[bG9jYWxob3N0]]></property></property></response>
+[9]
+[9] <- context_get -i 29 -d 0 -c 2
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_get" transaction_id="29" context="2"><property name="SWOOLE_LIBRARY" fullname="SWOOLE_LIBRARY" type="bool" facet="constant"><![CDATA[1]]></property></response>
+[9]
+[9] <- run -i 30
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="run" transaction_id="30" status="stopping" reason="ok"></response>
+[9]
+[9] <- stop -i 31
+[9] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stop" transaction_id="31" status="stopped" reason="ok"></response>
+[9]
+[9] Log closed at 2020-07-23 04:52:25
+[9]
+[10] Log opened at 2020-07-23 04:53:41
+[10] I: Connecting to configured address/port: host.docker.internal:9001.
+[10] I: Connected to client. :-)
+[10] -> <init xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" fileuri="file:///var/www/html/xdebug/demo.php" language="PHP" xdebug:language_version="7.3.8" protocol_version="1.0" appid="10" idekey="PHPSTORM"><engine version="2.7.2"><![CDATA[Xdebug]]></engine><author><![CDATA[Derick Rethans]]></author><url><![CDATA[https://xdebug.org]]></url><copyright><![CDATA[Copyright (c) 2002-2019 by Derick Rethans]]></copyright></init>
+[10]
+[10] <- breakpoint_list -i 1
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="1"></response>
+[10]
+[10] <- breakpoint_set -i 2 -t line -f file:///var/www/html/xdebug/demo.php -n 3
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="2" id="100001"></response>
+[10]
+[10] <- breakpoint_set -i 3 -t line -f file:///var/www/html/xdebug/demo.php -n 6
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="3" id="100002"></response>
+[10]
+[10] <- breakpoint_set -i 4 -t line -f file:///var/www/html/xdebug/demo.php -n 7
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="4" id="100003"></response>
+[10]
+[10] <- breakpoint_list -i 5
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="5"><breakpoint type="line" filename="file:///var/www/html/xdebug/demo.php" lineno="3" state="enabled" hit_count="0" hit_value="0" id="100001"></breakpoint><breakpoint type="line" filename="file:///var/www/html/xdebug/demo.php" lineno="6" state="enabled" hit_count="0" hit_value="0" id="100002"></breakpoint><breakpoint type="line" filename="file:///var/www/html/xdebug/demo.php" lineno="7" state="enabled" hit_count="0" hit_value="0" id="100003"></breakpoint></response>
+[10]
+[10] <- breakpoint_list -i 6
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_list" transaction_id="6"><breakpoint type="line" filename="file:///var/www/html/xdebug/demo.php" lineno="3" state="enabled" hit_count="0" hit_value="0" id="100001"></breakpoint><breakpoint type="line" filename="file:///var/www/html/xdebug/demo.php" lineno="6" state="enabled" hit_count="0" hit_value="0" id="100002"></breakpoint><breakpoint type="line" filename="file:///var/www/html/xdebug/demo.php" lineno="7" state="enabled" hit_count="0" hit_value="0" id="100003"></breakpoint></response>
+[10]
+[10] <- breakpoint_set -i 7 -t exception -x *
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="breakpoint_set" transaction_id="7" id="100004"></response>
+[10]
+[10] <- run -i 8
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="run" transaction_id="8" status="break" reason="ok"><xdebug:message filename="file:///var/www/html/xdebug/demo.php" lineno="3"></xdebug:message></response>
+[10]
+[10] <- stack_get -i 9
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="9"><stack where="{main}" level="0" type="file" filename="file:///var/www/html/xdebug/demo.php" lineno="3"></stack></response>
+[10]
+[10] <- context_names -i 10 -d 0
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_names" transaction_id="10"><context name="Locals" id="0"></context><context name="Superglobals" id="1"></context><context name="User defined constants" id="2"></context></response>
+[10]
+[10] <- context_get -i 11 -d 0 -c 0
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_get" transaction_id="11" context="0"><property name="$a" fullname="$a" type="uninitialized"></property><property name="$b" fullname="$b" type="uninitialized"></property><property name="$c" fullname="$c" type="uninitialized"></property><property name="$d" fullname="$d" type="uninitialized"></property><property name="$e" fullname="$e" type="uninitialized"></property></response>
+[10]
+[10] <- run -i 12
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="run" transaction_id="12" status="break" reason="ok"><xdebug:message filename="file:///var/www/html/xdebug/demo.php" lineno="6"></xdebug:message></response>
+[10]
+[10] <- stack_get -i 13
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="13"><stack where="{main}" level="0" type="file" filename="file:///var/www/html/xdebug/demo.php" lineno="6"></stack></response>
+[10]
+[10] <- context_names -i 14 -d 0
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_names" transaction_id="14"><context name="Locals" id="0"></context><context name="Superglobals" id="1"></context><context name="User defined constants" id="2"></context></response>
+[10]
+[10] <- context_get -i 15 -d 0 -c 0
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_get" transaction_id="15" context="0"><property name="$a" fullname="$a" type="int"><![CDATA[1]]></property><property name="$b" fullname="$b" type="int"><![CDATA[2]]></property><property name="$c" fullname="$c" type="uninitialized"></property><property name="$d" fullname="$d" type="uninitialized"></property><property name="$e" fullname="$e" type="uninitialized"></property></response>
+[10]
+[10] <- run -i 16
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="run" transaction_id="16" status="break" reason="ok"><xdebug:message filename="file:///var/www/html/xdebug/demo.php" lineno="7"></xdebug:message></response>
+[10]
+[10] <- stack_get -i 17
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stack_get" transaction_id="17"><stack where="{main}" level="0" type="file" filename="file:///var/www/html/xdebug/demo.php" lineno="7"></stack></response>
+[10]
+[10] <- context_names -i 18 -d 0
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_names" transaction_id="18"><context name="Locals" id="0"></context><context name="Superglobals" id="1"></context><context name="User defined constants" id="2"></context></response>
+[10]
+[10] <- context_get -i 19 -d 0 -c 0
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="context_get" transaction_id="19" context="0"><property name="$a" fullname="$a" type="int"><![CDATA[1]]></property><property name="$b" fullname="$b" type="int"><![CDATA[2]]></property><property name="$c" fullname="$c" type="int"><![CDATA[3]]></property><property name="$d" fullname="$d" type="uninitialized"></property><property name="$e" fullname="$e" type="uninitialized"></property></response>
+[10]
+[10] <- run -i 20
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="run" transaction_id="20" status="stopping" reason="ok"></response>
+[10]
+[10] <- stop -i 21
+[10] -> <response xmlns="urn:debugger_protocol_v1" xmlns:xdebug="https://xdebug.org/dbgp/xdebug" command="stop" transaction_id="21" status="stopped" reason="ok"></response>
+[10]
+[10] Log closed at 2020-07-23 04:53:45
+[10]
+[9] Log opened at 2020-07-23 04:58:01
+[9] I: Connecting to configured address/port: host.docker.internal:9001.
+[9] W: Creating socket for 'host.docker.internal:9001', poll success, but error: Operation now in progress (29).
+[9] E: Could not connect to client. :-(
+[9] Log closed at 2020-07-23 04:58:01
+[9]
+[10] Log opened at 2020-07-23 04:58:15
+[10] I: Connecting to configured address/port: host.docker.internal:9001.
+[10] W: Creating socket for 'host.docker.internal:9001', poll success, but error: Operation now in progress (29).
+[10] E: Could not connect to client. :-(
+[10] Log closed at 2020-07-23 04:58:15
+[10]
